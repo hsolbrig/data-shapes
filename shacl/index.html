@@ -123,6 +123,19 @@
 			.todo {
 				color: red;
 			}
+			.practice {
+				background-color: #DA81F5;
+			}
+			.practicelab {
+				background-color: #DA81F5;
+				font-weight: bold;
+				font-size: 16px
+			}
+			.practicedesc {
+				background-color: #ECE0F8;
+				font-size: 14px
+			}
+			
 
 			/* our syntax menu for switching */
 			div.syntaxmenu {
@@ -776,12 +789,19 @@ ex:FilteredShapeValidExampleInstance
 					The property <code>sh:property</code> can be used to link a shape with its property constraints.
 				</p>
 				<p>
-					In SHACL, property constraints are instances of the class <code>sh:PropertyConstraint</code>.
-					When used as values of <code>sh:property</code>, property constraints do not require an <code>rdf:type</code> triple.
-					However, if those values are IRIs, then they SHOULD have an <code>rdf:type</code> triple.
-					Note that <code>sh:property</code> may also have values that are sub-classes of <code>sh:PropertyConstraint</code>,
-					but in this case the <code>rdf:type</code> triple is required.
-					It is not valid to use <code>sh:property</code> for constraints that are not instance of <code>sh:PropertyConstraint</code>.
+					In SHACL, property constraints are assumed to  instances of the class <code>sh:PropertyConstraint</code>.
+					<div class="practice">
+						<p>
+						<span id="propertyConstraintType" class="praticelab">Typing property constraints</span>
+						</p>
+						<p class="practicedesc">
+							When used as values of <code>sh:property</code>, property constraints do not require an <code>rdf:type</code> triple.
+							However, if those values are IRIs, then they SHOULD have an <code>rdf:type</code> triple.
+							Note that <code>sh:property</code> may also have values that are sub-classes of <code>sh:PropertyConstraint</code>,
+							but in this case the <code>rdf:type</code> triple is required.
+							It is not valid to use <code>sh:property</code> for constraints that are not instance of <code>sh:PropertyConstraint</code>.
+						</p>
+					</div>
 				</p>
 				<p> 
 					The following examples illustrate two ways of using property constraints.
